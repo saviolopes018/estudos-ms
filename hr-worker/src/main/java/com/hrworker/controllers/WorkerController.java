@@ -25,13 +25,13 @@ public class WorkerController {
 	
 	@Autowired private WorkerRepository repository;
 	
-	@GetMapping("buscar")
+	@GetMapping
 	public ResponseEntity<List<Worker>> findAll() {
 		List<Worker> list = repository.findAll();
 		return ResponseEntity.ok(list);
 	}
 	
-	@GetMapping("buscar-por-id/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id) {
 		
 		/*

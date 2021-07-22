@@ -12,7 +12,7 @@ import com.hrpayroll.model.Worker;
 @FeignClient(name = "hr-worker", path = "/workers")
 public interface WorkerFeignClient {
 	
-	@GetMapping("buscar-por-id/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id);
 	
 }
